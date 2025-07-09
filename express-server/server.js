@@ -13,16 +13,16 @@ app.use(cors());
 const mongodb_url = process.env.MONGO_URL;
 const mongodb_name = process.env.MONGO_DB;
 
-app.get('/api/soccer', async (req, res) => {
+app.get('/api/sports', async (req, res) => {
 
     let client;
 
     try {
         client= await MongoClient.connect(mongodb_url);
         const db = client.db(mongodb_name);
-        const collection = db.collection("soccer");
-        const planets = await collection.find().toArray();
-        res.json(soccer);
+        const collection = db.collection("sports");
+        const sports = await collection.find().toArray();
+        res.json(sports);
     } catch (err) {
         console.error(err);
     } finally {
