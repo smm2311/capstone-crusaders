@@ -6,13 +6,11 @@ import { useState } from 'react';
 function ProductDetail() {
   const { id } = useParams();
   const product = productsData.find(p => p.id === parseInt(id));
-  const { addToCart } = useCart();
-  const [added, setAdded] = useState(false);
+  const { cart, addToCart } = useCart();
+  const inCart = cart.some(item => item.id === product?.id);
   if (!product) return <div className="alert alert-danger">Product not found.</div>;
   function handleAdd() {
-    addToCart(product, 1);
-    setAdded(true);
-    setTimeout(() => setAdded(false), 1200);
+    if (!inCart) addToCart(product);
   }
   return (
     <div className="row">
@@ -24,8 +22,8 @@ function ProductDetail() {
         <p className="text-muted">Category: {product.category}</p>
         <p>{product.description}</p>
         <h4 className="fw-bold mb-3">${product.price.toFixed(2)}</h4>
-        <button className="btn btn-success btn-lg mb-2" onClick={handleAdd} disabled={added}>
-          {added ? 'Added!' : 'Add to Cart'}
+        <button className="btn btn-success btn-lg mb-2" onClick={handleAdd} disabled={inCart}>
+          {inCart ? <i className="bi bi-check-circle-fill"></i> : 'Add to Cart'}
         </button>
         <div><Link to="/products">Back to Products</Link></div>
       </div>
