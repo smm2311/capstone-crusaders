@@ -1,0 +1,14 @@
+.navbar-brand {
+  font-family: 'Oswald', Arial, sans-serif;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+
+.navbar {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #ffc107 !important;
+}
