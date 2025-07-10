@@ -1,0 +1,1451 @@
+[
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "small",
+        "price": 87
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "red",
+        "size": "small",
+        "price": 13
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "small",
+        "price": 86
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "green",
+        "size": "small",
+        "price": 97
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "blue",
+        "size": "small",
+        "price": 50
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "red",
+        "size": "large",
+        "price": 39
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "violet",
+        "size": "large",
+        "price": 1
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "green",
+        "size": "large",
+        "price": 84
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "red",
+        "size": "medium",
+        "price": 3
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "red",
+        "size": "medium",
+        "price": 10
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "orange",
+        "size": "large",
+        "price": 74
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "red",
+        "size": "large",
+        "price": 56
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "orange",
+        "size": "large",
+        "price": 58
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "orange",
+        "size": "medium",
+        "price": 60
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "green",
+        "size": "large",
+        "price": 13
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "green",
+        "size": "medium",
+        "price": 62
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "red",
+        "size": "small",
+        "price": 49
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "orange",
+        "size": "medium",
+        "price": 51
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "green",
+        "size": "medium",
+        "price": 97
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "orange",
+        "size": "large",
+        "price": 82
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "small",
+        "price": 46
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "violet",
+        "size": "small",
+        "price": 53
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "orange",
+        "size": "large",
+        "price": 14
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 30
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "small",
+        "price": 52
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "small",
+        "price": 14
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "green",
+        "size": "small",
+        "price": 86
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "medium",
+        "price": 87
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "blue",
+        "size": "medium",
+        "price": 52
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "green",
+        "size": "large",
+        "price": 22
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "green",
+        "size": "medium",
+        "price": 32
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "violet",
+        "size": "small",
+        "price": 100
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "orange",
+        "size": "medium",
+        "price": 89
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "red",
+        "size": "medium",
+        "price": 53
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "blue",
+        "size": "small",
+        "price": 51
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "violet",
+        "size": "large",
+        "price": 6
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "orange",
+        "size": "medium",
+        "price": 86
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "orange",
+        "size": "large",
+        "price": 67
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "green",
+        "size": "large",
+        "price": 98
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "large",
+        "price": 63
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "small",
+        "price": 40
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "small",
+        "price": 41
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "medium",
+        "price": 36
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "orange",
+        "size": "medium",
+        "price": 23
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "red",
+        "size": "small",
+        "price": 74
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 15
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "large",
+        "price": 11
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "orange",
+        "size": "large",
+        "price": 10
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "green",
+        "size": "medium",
+        "price": 89
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "violet",
+        "size": "large",
+        "price": 76
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "red",
+        "size": "large",
+        "price": 29
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "violet",
+        "size": "small",
+        "price": 10
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "blue",
+        "size": "small",
+        "price": 71
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "blue",
+        "size": "small",
+        "price": 50
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "blue",
+        "size": "large",
+        "price": 18
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "green",
+        "size": "small",
+        "price": 100
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "green",
+        "size": "small",
+        "price": 98
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "red",
+        "size": "large",
+        "price": 49
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "medium",
+        "price": 59
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "violet",
+        "size": "medium",
+        "price": 29
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "large",
+        "price": 97
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "large",
+        "price": 6
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 96
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "violet",
+        "size": "large",
+        "price": 47
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "orange",
+        "size": "medium",
+        "price": 59
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "small",
+        "price": 63
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "red",
+        "size": "small",
+        "price": 43
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "violet",
+        "size": "large",
+        "price": 27
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "red",
+        "size": "medium",
+        "price": 19
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "small",
+        "price": 15
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "blue",
+        "size": "large",
+        "price": 75
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "red",
+        "size": "large",
+        "price": 72
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "large",
+        "price": 48
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "medium",
+        "price": 9
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "red",
+        "size": "large",
+        "price": 68
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "green",
+        "size": "medium",
+        "price": 44
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "large",
+        "price": 42
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "red",
+        "size": "large",
+        "price": 11
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 16
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "blue",
+        "size": "large",
+        "price": 30
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "violet",
+        "size": "small",
+        "price": 10
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "orange",
+        "size": "medium",
+        "price": 26
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "orange",
+        "size": "large",
+        "price": 10
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "green",
+        "size": "large",
+        "price": 98
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "red",
+        "size": "medium",
+        "price": 57
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "green",
+        "size": "large",
+        "price": 67
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "large",
+        "price": 90
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 25
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "orange",
+        "size": "small",
+        "price": 38
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "violet",
+        "size": "large",
+        "price": 99
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "orange",
+        "size": "medium",
+        "price": 61
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "large",
+        "price": 57
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "red",
+        "size": "large",
+        "price": 62
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "small",
+        "price": 54
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "large",
+        "price": 59
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 1
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "blue",
+        "size": "medium",
+        "price": 9
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 66
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "medium",
+        "price": 48
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "orange",
+        "size": "large",
+        "price": 87
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 41
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "blue",
+        "size": "medium",
+        "price": 72
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "blue",
+        "size": "small",
+        "price": 16
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "orange",
+        "size": "medium",
+        "price": 4
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "large",
+        "price": 24
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "blue",
+        "size": "small",
+        "price": 16
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "green",
+        "size": "medium",
+        "price": 60
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "blue",
+        "size": "small",
+        "price": 41
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "blue",
+        "size": "medium",
+        "price": 7
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "blue",
+        "size": "large",
+        "price": 52
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "red",
+        "size": "medium",
+        "price": 92
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "medium",
+        "price": 92
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "medium",
+        "price": 38
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "small",
+        "price": 1
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "small",
+        "price": 60
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "large",
+        "price": 48
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "large",
+        "price": 57
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "red",
+        "size": "small",
+        "price": 55
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 58
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "green",
+        "size": "large",
+        "price": 17
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "violet",
+        "size": "small",
+        "price": 39
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "green",
+        "size": "small",
+        "price": 29
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "orange",
+        "size": "medium",
+        "price": 27
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "large",
+        "price": 75
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "large",
+        "price": 63
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "small",
+        "price": 68
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "small",
+        "price": 2
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "green",
+        "size": "medium",
+        "price": 8
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "green",
+        "size": "medium",
+        "price": 83
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "green",
+        "size": "medium",
+        "price": 6
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "orange",
+        "size": "large",
+        "price": 51
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "red",
+        "size": "medium",
+        "price": 20
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 64
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "orange",
+        "size": "medium",
+        "price": 36
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "red",
+        "size": "medium",
+        "price": 43
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "large",
+        "price": 89
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "small",
+        "price": 51
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "red",
+        "size": "large",
+        "price": 60
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "violet",
+        "size": "medium",
+        "price": 89
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "orange",
+        "size": "large",
+        "price": 79
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 60
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "orange",
+        "size": "large",
+        "price": 21
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "large",
+        "price": 56
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "large",
+        "price": 9
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "blue",
+        "size": "large",
+        "price": 11
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "red",
+        "size": "small",
+        "price": 40
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "blue",
+        "size": "small",
+        "price": 98
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "red",
+        "size": "medium",
+        "price": 29
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "violet",
+        "size": "small",
+        "price": 58
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "blue",
+        "size": "medium",
+        "price": 69
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "violet",
+        "size": "small",
+        "price": 98
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "violet",
+        "size": "medium",
+        "price": 44
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "orange",
+        "size": "medium",
+        "price": 12
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "green",
+        "size": "large",
+        "price": 40
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "small",
+        "price": 91
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "orange",
+        "size": "large",
+        "price": 88
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "violet",
+        "size": "small",
+        "price": 83
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "blue",
+        "size": "large",
+        "price": 2
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "green",
+        "size": "large",
+        "price": 88
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "blue",
+        "size": "large",
+        "price": 50
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "large",
+        "price": 7
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "green",
+        "size": "small",
+        "price": 31
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "violet",
+        "size": "small",
+        "price": 3
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "red",
+        "size": "medium",
+        "price": 11
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "orange",
+        "size": "small",
+        "price": 56
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "orange",
+        "size": "medium",
+        "price": 45
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "orange",
+        "size": "large",
+        "price": 100
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "blue",
+        "size": "large",
+        "price": 95
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "violet",
+        "size": "large",
+        "price": 6
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "orange",
+        "size": "medium",
+        "price": 60
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 34
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "green",
+        "size": "medium",
+        "price": 72
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "red",
+        "size": "small",
+        "price": 100
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "orange",
+        "size": "medium",
+        "price": 48
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "violet",
+        "size": "medium",
+        "price": 16
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "orange",
+        "size": "large",
+        "price": 31
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "large",
+        "price": 90
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "blue",
+        "size": "medium",
+        "price": 1
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "red",
+        "size": "small",
+        "price": 19
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "large",
+        "price": 29
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 14
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "green",
+        "size": "small",
+        "price": 5
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "green",
+        "size": "small",
+        "price": 7
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "medium",
+        "price": 11
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "violet",
+        "size": "small",
+        "price": 17
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "violet",
+        "size": "large",
+        "price": 34
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "medium",
+        "price": 35
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "green",
+        "size": "small",
+        "price": 47
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 65
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "green",
+        "size": "large",
+        "price": 58
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "blue",
+        "size": "large",
+        "price": 45
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "violet",
+        "size": "small",
+        "price": 29
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "large",
+        "price": 53
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "violet",
+        "size": "large",
+        "price": 52
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "medium",
+        "price": 86
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "large",
+        "price": 98
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "small",
+        "price": 29
+    },
+    {
+        "productName": "socks",
+        "category": "basketball",
+        "color": "red",
+        "size": "large",
+        "price": 49
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 73
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "blue",
+        "size": "small",
+        "price": 63
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "medium",
+        "price": 40
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "green",
+        "size": "large",
+        "price": 76
+    },
+    {
+        "productName": "ball",
+        "category": "basketball",
+        "color": "indigo",
+        "size": "small",
+        "price": 76
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 85
+    },
+    {
+        "productName": "shorts",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "small",
+        "price": 1
+    },
+    {
+        "productName": "shoes",
+        "category": "basketball",
+        "color": "violet",
+        "size": "medium",
+        "price": 47
+    },
+    {
+        "productName": "jersey",
+        "category": "basketball",
+        "color": "yellow",
+        "size": "medium",
+        "price": 80
+    }
+]

@@ -210,6 +210,45 @@ app.get('/api/tennis/:productId', async (req, res) => {
 
 });
 
+app.get('/api/sports/:productId', async (req, res) => {
+
+    let client;
+
+    try {
+        client= await MongoClient.connect(mongodb_url);
+        const db = client.db(mongodb_name);
+        const collection = db.collection("sports");
+        const sports = await collection.findOne({productId: +req.params.productId});
+        res.json(sports);
+    } catch (err) {
+        console.error(err);
+    } finally {
+        await client.close();
+    }
+
+});
+
+
+app.put("/api/:productId", async (req, res) => {
+    
+    console.log(req.body)
+    let client;
+
+    try {
+        client= await MongoClient.connect(mongodb_url);
+        const db = client.db(mongodb_name);
+        const collection = db.collection("orders");
+        const status = await collection.insertOne(req.body);
+        res.send(status)
+    } catch (err) {
+        console.error(err);
+    } finally {
+        await client.close();
+    }
+
+    
+    });
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
