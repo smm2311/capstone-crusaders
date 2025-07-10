@@ -27,7 +27,6 @@ function Checkout() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // Check all required fields are filled
     const required = [
       'billingFirst','billingLast','billingAddress','billingCity','billingState','billingZip',
       'shippingFirst','shippingLast','shippingAddress','shippingCity','shippingState','shippingZip',

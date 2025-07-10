@@ -2,13 +2,13 @@ const categories = [
   'Soccer',
   'Basketball',
   'Baseball',
+  'Hockey',
   'Tennis',
   'Golf',
   'Running',
   'Cycling',
   'Swimming',
   'Volleyball',
-  'Hockey',
 ];
 
 export default categories;

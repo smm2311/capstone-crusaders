@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
 import categories from '../data/categories';
 import products from '../data/products';
+import categoryIcons from '../assets/categoryIcons';
 
 function Home() {
-  // Featured products: pick first 3 for demo
   const featured = products.slice(0, 3);
-  // Featured categories: pick first 4 for demo
   const featuredCategories = categories.slice(0, 4);
 
   return (
@@ -28,7 +27,7 @@ function Home() {
                 <div className="card text-center h-100 shadow-sm border-0 bg-primary text-light hover-shadow">
                   <div className="card-body py-4">
                     <span className="fs-2 text-warning mb-2 d-block">
-                      <i className="bi bi-trophy"></i>
+                      <i className={categoryIcons[cat]}></i>
                     </span>
                     <h5 className="card-title fw-bold">{cat}</h5>
                   </div>
@@ -56,34 +55,6 @@ function Home() {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* About/Promo Section */}
-      <section className="bg-light rounded-3 p-4 shadow text-center mb-5">
-        <h3 className="fw-bold mb-3">Why Shop With Us?</h3>
-        <div className="row g-4 justify-content-center">
-          <div className="col-12 col-md-4">
-            <div className="p-3">
-              <i className="bi bi-truck fs-1 text-primary mb-2"></i>
-              <h5 className="fw-bold">Fast Shipping</h5>
-              <p>Get your gear delivered quickly, anywhere in the country.</p>
-            </div>
-          </div>
-          <div className="col-12 col-md-4">
-            <div className="p-3">
-              <i className="bi bi-shield-check fs-1 text-primary mb-2"></i>
-              <h5 className="fw-bold">Quality Guarantee</h5>
-              <p>Only the best brands and products, guaranteed authentic.</p>
-            </div>
-          </div>
-          <div className="col-12 col-md-4">
-            <div className="p-3">
-              <i className="bi bi-people fs-1 text-primary mb-2"></i>
-              <h5 className="fw-bold">Expert Support</h5>
-              <p>Our team is here to help you find the perfect equipment.</p>
-            </div>
-          </div>
         </div>
       </section>
     </>

@@ -7,13 +7,13 @@ function CategoryList({ categories, selected, onSelect }) {
       >
         All Categories
       </button>
-      {categories.map((cat) => (
+      {categories.map((category) => (
         <button
-          key={cat}
-          className={`list-group-item list-group-item-action${selected === cat ? ' active' : ''}`}
-          onClick={() => onSelect(cat)}
+          key={category}
+          className={`list-group-item list-group-item-action${selected === category ? ' active' : ''}`}
+          onClick={() => onSelect(category)}
         >
-          {cat}
+          {category}
         </button>
       ))}
     </div>
