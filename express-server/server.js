@@ -31,6 +31,184 @@ app.get('/api/sports', async (req, res) => {
 });
 
 
+app.get('/api/basketball', async (req, res) => {
+
+    let client;
+
+    try {
+        client= await MongoClient.connect(mongodb_url);
+        const db = client.db(mongodb_name);
+        const collection = db.collection("basketball");
+        const basketball = await collection.find().toArray();
+        res.json(basketball);
+    } catch (err) {
+        console.error(err);
+    } finally {
+        await client.close();
+    }
+});
+
+app.get('/api/baseball', async (req, res) => {
+
+    let client;
+
+    try {
+        client= await MongoClient.connect(mongodb_url);
+        const db = client.db(mongodb_name);
+        const collection = db.collection("baseball");
+        const baseball = await collection.find().toArray();
+        res.json(baseball);
+    } catch (err) {
+        console.error(err);
+    } finally {
+        await client.close();
+    }
+});
+
+app.get('/api/football', async (req, res) => {
+
+    let client;
+
+    try {
+        client= await MongoClient.connect(mongodb_url);
+        const db = client.db(mongodb_name);
+        const collection = db.collection("football");
+        const football = await collection.find().toArray();
+        res.json(football);
+    } catch (err) {
+        console.error(err);
+    } finally {
+        await client.close();
+    }
+});
+
+app.get('/api/soccer', async (req, res) => {
+
+    let client;
+
+    try {
+        client= await MongoClient.connect(mongodb_url);
+        const db = client.db(mongodb_name);
+        const collection = db.collection("soccer");
+        const soccer = await collection.find().toArray();
+        res.json(soccer);
+    } catch (err) {
+        console.error(err);
+    } finally {
+        await client.close();
+    }
+});
+
+app.get('/api/tennis', async (req, res) => {
+
+    let client;
+
+    try {
+        client= await MongoClient.connect(mongodb_url);
+        const db = client.db(mongodb_name);
+        const collection = db.collection("tennis");
+        const tennis = await collection.find().toArray();
+        res.json(tennis);
+    } catch (err) {
+        console.error(err);
+    } finally {
+        await client.close();
+    }
+});
+
+app.get('/api/basketball/:productId', async (req, res) => {
+
+    let client;
+
+    try {
+        client= await MongoClient.connect(mongodb_url);
+        const db = client.db(mongodb_name);
+        const collection = db.collection("basketball");
+        const basketball = await collection.findOne({productId: +req.params.productId});
+        res.json(basketball);
+    } catch (err) {
+        console.error(err);
+    } finally {
+        await client.close();
+    }
+
+});
+
+
+app.get('/api/baseball/:productId', async (req, res) => {
+
+    let client;
+
+    try {
+        client= await MongoClient.connect(mongodb_url);
+        const db = client.db(mongodb_name);
+        const collection = db.collection("baseball");
+        const baseball = await collection.findOne({productId: +req.params.productId});
+        res.json(baseball);
+    } catch (err) {
+        console.error(err);
+    } finally {
+        await client.close();
+    }
+
+});
+
+
+app.get('/api/football/:productId', async (req, res) => {
+
+    let client;
+
+    try {
+        client= await MongoClient.connect(mongodb_url);
+        const db = client.db(mongodb_name);
+        const collection = db.collection("football");
+        const football = await collection.findOne({productId: +req.params.productId});
+        res.json(football);
+    } catch (err) {
+        console.error(err);
+    } finally {
+        await client.close();
+    }
+
+});
+
+
+app.get('/api/soccer/:productId', async (req, res) => {
+
+    let client;
+
+    try {
+        client= await MongoClient.connect(mongodb_url);
+        const db = client.db(mongodb_name);
+        const collection = db.collection("soccer");
+        const soccer = await collection.findOne({productId: +req.params.productId});
+        res.json(soccer);
+    } catch (err) {
+        console.error(err);
+    } finally {
+        await client.close();
+    }
+
+});
+
+
+app.get('/api/tennis/:productId', async (req, res) => {
+
+    let client;
+
+    try {
+        client= await MongoClient.connect(mongodb_url);
+        const db = client.db(mongodb_name);
+        const collection = db.collection("tennis");
+        const tennis = await collection.findOne({productId: +req.params.productId});
+        res.json(tennis);
+    } catch (err) {
+        console.error(err);
+    } finally {
+        await client.close();
+    }
+
+});
 
 // Start the server
 app.listen(port, () => {
