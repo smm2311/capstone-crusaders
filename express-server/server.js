@@ -9,6 +9,7 @@ const app = express();
 const port = 3000;
 
 app.use(cors());
+app.use(express.json());
 
 const mongodb_url = process.env.MONGO_URL;
 const mongodb_name = process.env.MONGO_DB;
@@ -228,26 +229,45 @@ app.get('/api/sports/:productId', async (req, res) => {
 
 });
 
+app.put("/api/order", async (req, res) => {
 
-app.put("/api/:productId", async (req, res) => {
-    
-    console.log(req.body)
+    // Takes in object with billing info and a list of product IDs
+
     let client;
 
     try {
         client= await MongoClient.connect(mongodb_url);
         const db = client.db(mongodb_name);
-        const collection = db.collection("orders");
-        const status = await collection.insertOne(req.body);
-        res.send(status)
+        const sports_collection = db.collection("sports");
+        const orders_collection = db.collection("orders");
+
+        for (let productId of req.body.productIds) {
+
+            // Find product in sports collection.
+            const product = await sports_collection.findOne({productId: +productId});
+            const category = product.category;
+
+            // Add product to orders collection.
+            const order_status = await orders_collection.insertOne({...product, orderInfo: req.body.orderInfo});
+
+            // Remove product from sports and sport-specific collections
+            const sport_specific_collection = db.collection(category);
+            const sport_specific_status = await sport_specific_collection.deleteOne({productId: +productId});
+            const sports_status = await sports_collection.deleteOne({productId: +productId});
+        }
+
+        res.status(200).send({
+            status: 'success',
+            message: 'User orders successfully.'
+        });
+
     } catch (err) {
         console.error(err);
     } finally {
         await client.close();
     }
 
-    
-    });
+});
 
 // Start the server
 app.listen(port, () => {
