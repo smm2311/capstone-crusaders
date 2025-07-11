@@ -3,10 +3,10 @@ from collections import defaultdict
 
 import numpy as np
 import random
-import pandas as pd
+from sklearn.model_selection import train_test_split
+
 import pickle
 
-from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
@@ -71,7 +71,14 @@ def create_data(
 
             category_number += 1
 
+    return train_test_split(X, y, test_size=0.2)
+
+def transform_data(
+        X_train: dict,
+        
+)
 if __name__ == '__main__':
 
     attributes_options = get_attributes_options()
+
     X_train, X_test, y_train, y_test = create_data(attributes_options)
