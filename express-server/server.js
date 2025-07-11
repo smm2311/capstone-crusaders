@@ -99,7 +99,7 @@ app.put('/api/customers', async (req, res) => {
 });
 
 // Put a new order into the orders collection, return their ID.
-app.put('/api/orders', async (req, res) => {
+app.post('/api/orders', async (req, res) => {
 
     let client;
 
