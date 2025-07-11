@@ -60,9 +60,7 @@ app.get('/api/products/id/:productId', async (req, res) => {
     let client;
 
     try {
-
-        console.log(req.params.productId);
-
+        
         client = await MongoClient.connect(mongodb_url);
         const db = client.db(mongodb_name);
         const collection = db.collection("products");
