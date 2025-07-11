@@ -2,46 +2,33 @@ import { useState, useEffect } from 'react';
 import ProductCard from '../components/ProductCard';
 import CategoryList from '../components/CategoryList';
 import { useParams } from 'react-router-dom';
+import fileCategories from '../data/categories';
 
 function Products() {
   const params = useParams();
   const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(params['category'] ?? null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchProducts() {
       setLoading(true);
-      const res = await fetch('http://localhost:3000/api/products');
-      const data = await res.json();
-      setProducts(data);
-      setCategories([...new Set(data.map(p => p.category))]);
-      setLoading(false);
-    }
-    fetchProducts();
-  }, []);
-
-  useEffect(() => {
-    async function fetchByCategory() {
-      setLoading(true);
       let url = selectedCategory
-        ? `http://localhost:3000/api/products/category/${selectedCategory}`
+        ? `http://localhost:3000/api/products/category/${selectedCategory.toLowerCase()}`
         : 'http://localhost:3000/api/products';
       const res = await fetch(url);
       const data = await res.json();
       setProducts(data);
-      setCategories([...new Set(data.map(p => p.category))]);
       setLoading(false);
     }
-    fetchByCategory();
+    fetchProducts();
   }, [selectedCategory]);
 
   return (
     <div className="row">
       <div className="col-md-3">
         <CategoryList 
-            categories={categories} 
+            categories={fileCategories}
             selected={selectedCategory} 
             onSelect={setSelectedCategory}
         />

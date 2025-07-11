@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 import categoryIcons from '../assets/categoryIcons';
 import { useState, useEffect } from 'react';
 import ProductCard from '../components/ProductCard';
+import featuredCategories from '../data/categories';
 
 function Home() {
 
   const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -15,18 +15,13 @@ function Home() {
       const res = await fetch('http://localhost:3000/api/products');
       const data = await res.json();
       setProducts(data);
-      setCategories([...new Set(data.map(p => p.category))]);
       setLoading(false);
     }
     fetchProducts();
   }, []);
 
-  if (loading) return <div className="text-center p-5">Loading...</div>;
-
   const slice_start_i = Math.floor(Math.random() * products.length);
   const featured = products.slice(slice_start_i, slice_start_i + 3);
-
-  const featuredCategories = categories;
 
   return (
     <>
