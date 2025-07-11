@@ -3,14 +3,14 @@ from collections import defaultdict
 
 import numpy as np
 import random
+import pandas as pd
 from sklearn.model_selection import train_test_split
 
-import pickle
+from sklearn.preprocessing import OneHotEncoder
 
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.preprocessing import OneHotEncoder
-from sklearn.compose import ColumnTransformer
-from sklearn.metrics import accuracy_score
+
+import pickle
 
 def get_attributes_options() -> dict:
     '''Read in MongoDB data to determine the possible values for each attribute.
@@ -31,8 +31,13 @@ def get_attributes_options() -> dict:
     attributes_options = defaultdict(set)
     for product in products:
         for attribute in product:
+
+            if attribute == '_id':
+                continue
+
             attributes_options[attribute].add(product[attribute])
 
+    # Convert the sets into lists and return the total dict.
     return {attribute: list(attributes_options[attribute]) for attribute in attributes_options}
 
 def create_data(
@@ -44,16 +49,17 @@ def create_data(
         attributes_options (dict): Map of attribute names to the list of possible values.
 
     Returns:
-        X_train_encoded:
-        X_test_encoded:
-        y_train_encoded:
-        y_test_encoded:
+        X (pd.DataFrame): X training data.
+        y (np.ndarray): y training data.
     '''
+    # This will keep track of categories.
     category_number = 0
 
+    # Save the data as numpy arrays.
     X = {attribute: np.array([]) for attribute in attributes_options}
     y = np.array([])
 
+    # Create a new category for every (category, productName) pair. Everything else will be random.
     for category in attributes_options['category']:
         for productName in attributes_options['productName']:
 
@@ -64,21 +70,41 @@ def create_data(
 
                 X['size'] = np.append(X['size'], [random.choice(attributes_options['size'])])
                 X['color'] = np.append(X['color'], [random.choice(attributes_options['color'])])
-                X['_id'] = np.append(X['_id'], [random.choice(attributes_options['_id'])])
                 X['price'] = np.append(X['price'], [random.choice(attributes_options['price'])])
 
                 y = np.append(y, category_number)
 
+            # Create a new category for the next (category, productName) pair.
             category_number += 1
 
-    return train_test_split(X, y, test_size=0.2)
+    return pd.DataFrame(X), y
 
 def transform_data(
-        X_train: dict,
-        
-)
+        X: pd.DataFrame,
+        ) -> tuple:
+    '''Transform the categorical X data.
+
+    Arguments:
+        X (pd.DataFrame): Training X data.
+
+    Returns:
+        X_encoded (pd.DataFrame): Encoded training X data.
+    '''
+    enc = OneHotEncoder()
+    X_encoded = enc.fit_transform(X_train)
+
+    return X_encoded
+
 if __name__ == '__main__':
 
     attributes_options = get_attributes_options()
 
-    X_train, X_test, y_train, y_test = create_data(attributes_options)
+    X_train, y_train = create_data(attributes_options)
+
+    X_train_encoded = transform_data(X_train)
+
+    model = KNeighborsClassifier()
+    model.fit(X_train_encoded, y_train)
+
+    with open(f'model.pkl', 'wb') as f:
+        pickle.dump(model, f)
