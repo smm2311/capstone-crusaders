@@ -7,18 +7,36 @@ function ProductDetail() {
   const { cart, addToCart } = useCart();
   const [product, setProduct] = useState(null);
   const [recommend, setRecommend] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [loadingRec, setLoadingRec] = useState(true);
   const inCart = cart.some(item => item.id === id);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/api/products/id/${id}`)
-      .then(res => res.json())
-      .then(data => setProduct({...data, id: data._id?.$oid || data._id}));
-    fetch(`http://localhost:3000/api/recommend/${id}`)
-      .then(res => res.json())
-      .then(data => setRecommend(data.recommended || []));
+    async function fetchProduct() {
+      setLoading(true);
+      const res = await fetch(`http://localhost:3000/api/products/id/${id}`);
+      const data = await res.json();
+      setProduct({...data, id: data._id?.$oid || data._id});
+      setLoading(false);
+    }
+    async function fetchRecommend() {
+      setLoadingRec(true);
+      const res = await fetch(`http://localhost:3000/api/recommend/${id}`);
+      const data = await res.json();
+      setRecommend(data.recommended || []);
+      setLoadingRec(false);
+    }
+    fetchProduct();
+    fetchRecommend();
   }, [id]);
 
-  if (!product) return <div className="alert alert-info">Loading...</div>;
+  if (loading) return (
+    <div className="d-flex justify-content-center align-items-center" style={{minHeight: '300px'}}>
+      <div className="spinner-border text-primary" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  );
 
   function handleAdd() {
     if (!inCart) addToCart(product);
@@ -38,16 +56,22 @@ function ProductDetail() {
           {inCart ? <i className="bi bi-check-circle-fill text-warning"></i> : 'Add to Cart'}
         </button>
         <div><Link to="/products">Back to Products</Link></div>
-        {recommend.length > 0 && (
-          <div className="mt-4">
-            <h5>Recommended Products</h5>
+        <div className="mt-4">
+          <h5>Recommended Products</h5>
+          {loadingRec ? (
+            <div className="d-flex justify-content-center align-items-center" style={{minHeight: '60px'}}>
+              <div className="spinner-border text-secondary" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          ) : recommend.length > 0 ? (
             <ul>
               {recommend.map(rid => (
                 <li key={rid}><Link to={`/products/${rid}`}>Product {rid}</Link></li>
               ))}
             </ul>
-          </div>
-        )}
+          ) : <div>No recommendations.</div>}
+        </div>
       </div>
     </div>
   );
