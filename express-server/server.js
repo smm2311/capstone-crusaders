@@ -78,7 +78,7 @@ app.get('/api/products/id/:productId', async (req, res) => {
 });
 
 // Put a new customer into the customers collection, return their ID.
-app.put('/api/customers', async (req, res) => {
+app.post('/api/customers', async (req, res) => {
 
     let client;
 
@@ -119,9 +119,12 @@ app.post('/api/orders', async (req, res) => {
     }
 });
 
-// TODO fill this in.
 app.get('/api/recommend/:productId', async (req, res) => {
-    res.json({'recommended': []});
+
+    const recommendations_res = await fetch(`http://localhost:5000/recommend/${req.params.productId}`);
+    const recommendations = await recommendations_res.json();
+
+    res.send(recommendations);
 });
 
 // Start the server

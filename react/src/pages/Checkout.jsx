@@ -26,7 +26,7 @@ function Checkout() {
     try {
       // 1. Create customer
       const customerRes = await fetch('http://localhost:3000/api/customers', {
-        method: 'PUT',
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)
       });
@@ -35,7 +35,7 @@ function Checkout() {
       // 2. Create orders for each product
       for (const item of cart) {
         await fetch('http://localhost:3000/api/orders', {
-          method: 'PUT',
+          method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ customerId: customerData.customerId, productId: item.id })
         });

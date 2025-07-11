@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import ProductCard from '../components/ProductCard';
 import CategoryList from '../components/CategoryList';
+import { useParams } from 'react-router-dom';
 
 function Products() {
+  const params = useParams();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(params['category'] ?? null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -29,6 +31,7 @@ function Products() {
       const res = await fetch(url);
       const data = await res.json();
       setProducts(data);
+      setCategories([...new Set(data.map(p => p.category))]);
       setLoading(false);
     }
     fetchByCategory();

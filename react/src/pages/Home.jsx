@@ -44,7 +44,7 @@ function Home() {
         <div className="row justify-content-center g-4">
           {featuredCategories.map(cat => (
             <div className="col-6 col-md-3" key={cat}>
-              <Link to="/products" className="text-decoration-none">
+              <Link to={`category/${cat}`} className="text-decoration-none">
                 <div className="card text-center h-100 shadow-sm border-0 bg-primary text-light hover-shadow">
                   <div className="card-body py-4">
                     <span className="fs-2 text-warning mb-2 d-block">
