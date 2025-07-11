@@ -1,11 +1,32 @@
 import { Link } from 'react-router-dom';
-import categories from '../data/categories';
-import products from '../data/products';
 import categoryIcons from '../assets/categoryIcons';
+import { useState, useEffect } from 'react';
+import ProductCard from '../components/ProductCard';
 
 function Home() {
-  const featured = products.slice(0, 3);
-  const featuredCategories = categories.slice(0, 4);
+
+  const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      setLoading(true);
+      const res = await fetch('http://localhost:3000/api/products');
+      const data = await res.json();
+      setProducts(data);
+      setCategories([...new Set(data.map(p => p.category))]);
+      setLoading(false);
+    }
+    fetchProducts();
+  }, []);
+
+  if (loading) return <div className="text-center p-5">Loading...</div>;
+
+  const slice_start_i = Math.floor(Math.random() * products.length);
+  const featured = products.slice(slice_start_i, slice_start_i + 3);
+
+  const featuredCategories = categories;
 
   return (
     <>
@@ -29,7 +50,7 @@ function Home() {
                     <span className="fs-2 text-warning mb-2 d-block">
                       <i className={categoryIcons[cat]}></i>
                     </span>
-                    <h5 className="card-title fw-bold">{cat}</h5>
+                    <h5 className="card-title fw-bold">{cat.charAt(0).toUpperCase() + cat.slice(1)}</h5>
                   </div>
                 </div>
               </Link>
@@ -43,18 +64,10 @@ function Home() {
         <h2 className="fw-bold mb-4 text-center">Featured Products</h2>
         <div className="row g-4 justify-content-center">
           {featured.map(product => (
-            <div className="col-12 col-md-4" key={product.id}>
-              <div className="card h-100 shadow-sm border-0">
-                <img src={product.image} className="card-img-top" alt={product.name} style={{objectFit:'cover',height:'220px'}} />
-                <div className="card-body d-flex flex-column">
-                  <h5 className="card-title">{product.name}</h5>
-                  <p className="card-text text-muted">{product.category}</p>
-                  <p className="card-text fw-bold">${product.price.toFixed(2)}</p>
-                  <Link to={`/products/${product.id}`} className="btn btn-primary mt-auto">View Details</Link>
+                <div className="col-md-4" key={product._id.$oid || product._id}>
+                  <ProductCard product={{...product, id: product._id.$oid || product._id}} />
                 </div>
-              </div>
-            </div>
-          ))}
+              ))}
         </div>
       </section>
     </>
