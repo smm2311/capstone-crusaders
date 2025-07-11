@@ -26,7 +26,10 @@ function ProductCard({ product }) {
             <i className={`bi ${inCart ? 'bi-check-circle-fill' : 'bi-cart-plus'}`} style={{fontSize:'1.3rem',transition:'color 0.2s'}}></i>
           </button>
         </div>
-        <p className="card-text text-muted">{product.category}</p>
+        <p className="text-muted">Category: {product.category}</p>
+        <p className="text-muted">Product Name: {product.productName}</p>
+        <p className="text-muted">Color: {product.color}</p>
+        <p className="text-muted">Size: {product.size}</p>
         <p className="card-text fw-bold">${product.price.toFixed(2)}</p>
         <Link to={`/products/${product.id}`} className="btn btn-primary mt-auto">View Details</Link>
       </div>
