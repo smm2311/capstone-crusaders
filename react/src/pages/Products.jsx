@@ -34,8 +34,6 @@ function Products() {
     fetchByCategory();
   }, [selectedCategory]);
 
-  if (loading) return <div className="text-center p-5">Loading...</div>;
-
   return (
     <div className="row">
       <div className="col-md-3">
@@ -46,14 +44,22 @@ function Products() {
         />
       </div>
       <div className="col-md-9">
-        <div className="row g-4">
-          {products.map(product => (
-            <div className="col-md-4" key={product._id.$oid || product._id}>
-              <ProductCard product={{...product, id: product._id.$oid || product._id}} />
+        {loading ? (
+          <div className="d-flex justify-content-center align-items-center" style={{minHeight: '300px'}}>
+            <div className="spinner-border text-primary" style={{width: '4rem', height: '4rem'}} role="status">
+              <span className="visually-hidden">Loading products...</span>
             </div>
-          ))}
-          {products.length === 0 && <div className="col-12"><p className="text-center">No products found.</p></div>}
-        </div>
+          </div>
+        ) : (
+          <div className="row g-4">
+            {products.map(product => (
+              <div className="col-md-4" key={product._id.$oid || product._id}>
+                <ProductCard product={{...product, id: product._id.$oid || product._id}} />
+              </div>
+            ))}
+            {products.length === 0 && <div className="col-12"><p className="text-center">No products found.</p></div>}
+          </div>
+        )}
       </div>
     </div>
   );
