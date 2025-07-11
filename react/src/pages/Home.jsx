@@ -5,9 +5,13 @@ import ProductCard from '../components/ProductCard';
 import featuredCategories from '../data/categories';
 
 function Home() {
-
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [sliceStartI, setSliceStartI] = useState(Math.floor(Math.random() * products.length));
+
+  let featured = products.slice(sliceStartI, sliceStartI + 3);
 
   useEffect(() => {
     async function fetchProducts() {
@@ -18,10 +22,18 @@ function Home() {
       setLoading(false);
     }
     fetchProducts();
+
   }, []);
 
-  const slice_start_i = Math.floor(Math.random() * products.length);
-  const featured = products.slice(slice_start_i, slice_start_i + 3);
+  const handleSearchChange = (event) => {
+    const query = event.target.value;
+    setSearchQuery(query);
+    setDropdownVisible(query.length > 0);
+  };
+
+  const filteredProducts = products.filter(product =>
+    product.productName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <>
@@ -31,6 +43,32 @@ function Home() {
         <p className="lead mb-4">Shop the best in sports equipment for every athlete, every sport, every season.</p>
         <Link to="/products" className="btn btn-warning btn-lg px-5 py-3 fw-bold shadow">Shop Now</Link>
         <img src="https://images.unsplash.com/photo-1505843279827-4b2b1b1aba51?auto=format&fit=crop&w=900&q=80" alt="Sports" className="position-absolute top-0 end-0 d-none d-md-block" style={{maxHeight:'100%',width:'40%',objectFit:'cover',opacity:0.15}} />
+      </section>
+
+      {/* Search Bar */}
+      <section className="mb-5">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-md-6 position-relative">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Search products..."
+                value={searchQuery}
+                onChange={handleSearchChange}
+              />
+              {dropdownVisible && (
+                <ul className="dropdown-menu show w-100" style={{maxHeight: '900px', overflowY: 'auto'}}>
+                  {filteredProducts.map(product => (
+                    <li key={product._id}>
+                      <ProductCard product={product} smallImages={true} />
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Featured Categories */}
@@ -43,7 +81,7 @@ function Home() {
                 <div className="card text-center h-100 shadow-sm border-0 bg-primary text-light hover-shadow">
                   <div className="card-body py-4">
                     <span className="fs-2 text-warning mb-2 d-block">
-                      <i className={categoryIcons[cat]}></i>
+                      <i className={categoryIcons[cat.toLowerCase()]}></i>
                     </span>
                     <h5 className="card-title fw-bold">{cat.charAt(0).toUpperCase() + cat.slice(1)}</h5>
                   </div>
@@ -59,10 +97,10 @@ function Home() {
         <h2 className="fw-bold mb-4 text-center">Featured Products</h2>
         <div className="row g-4 justify-content-center">
           {featured.map(product => (
-                <div className="col-md-4" key={product._id.$oid || product._id}>
-                  <ProductCard product={{...product, id: product._id.$oid || product._id}} />
-                </div>
-              ))}
+            <div className="col-md-4" key={product._id}>
+              <ProductCard product={product} />
+            </div>
+          ))}
         </div>
       </section>
     </>

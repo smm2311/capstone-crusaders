@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext';
 import { useState } from 'react';
 
-function ProductCard({ product }) {
+function ProductCard({ product, smallImages = false }) {
   const { cart, addToCart } = useCart();
   const inCart = cart.some(item => item.id === product.id);
   const [added, setAdded] = useState(false);
@@ -18,7 +18,8 @@ function ProductCard({ product }) {
 
   return (
     <div className="card h-100 shadow-sm">
-      <img src={`/src/assets/${product.category}_${product.productName.replaceAll(' ', '_')}.jpg`} className="card-img-top" alt={product.productName} style={{objectFit:'cover',height:'200px'}} />
+      <img src={`/src/assets/${product.category}_${product.productName.replaceAll(' ', '_')}.jpg`} className="card-img-top" alt={product.productName} 
+        style={{objectFit:'contain', height: smallImages ? '100px' : '200px', width: smallImages ? '100px' : '' }} />
       <div className="card-body d-flex flex-column">
         <div className="d-flex align-items-center justify-content-between mb-2">
           <h5 className="card-title mb-0">{product.productName.charAt(0).toUpperCase() + product.productName.slice(1)}</h5>
@@ -31,7 +32,7 @@ function ProductCard({ product }) {
         <p className="text-muted">Color: {product.color}</p>
         <p className="text-muted">Size: {product.size}</p>
         <p className="card-text fw-bold">${product.price.toFixed(2)}</p>
-        <Link to={`/products/${product.id}`} className="btn btn-primary mt-auto">View Details</Link>
+        <Link to={`/products/${product._id}`} className="btn btn-primary mt-auto">View Details</Link>
       </div>
     </div>
   );
