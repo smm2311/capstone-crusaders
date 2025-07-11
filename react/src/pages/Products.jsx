@@ -1,0 +1,62 @@
+import { useState, useEffect } from 'react';
+import ProductCard from '../components/ProductCard';
+import CategoryList from '../components/CategoryList';
+
+function Products() {
+  const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      setLoading(true);
+      const res = await fetch('http://localhost:3000/api/products');
+      const data = await res.json();
+      setProducts(data);
+      setCategories([...new Set(data.map(p => p.category))]);
+      setLoading(false);
+    }
+    fetchProducts();
+  }, []);
+
+  useEffect(() => {
+    async function fetchByCategory() {
+      setLoading(true);
+      let url = selectedCategory
+        ? `http://localhost:3000/api/products/category/${selectedCategory}`
+        : 'http://localhost:3000/api/products';
+      const res = await fetch(url);
+      const data = await res.json();
+      setProducts(data);
+      setLoading(false);
+    }
+    fetchByCategory();
+  }, [selectedCategory]);
+
+  if (loading) return <div className="text-center p-5">Loading...</div>;
+
+  return (
+    <div className="row">
+      <div className="col-md-3">
+        <CategoryList 
+            categories={categories} 
+            selected={selectedCategory} 
+            onSelect={setSelectedCategory}
+        />
+      </div>
+      <div className="col-md-9">
+        <div className="row g-4">
+          {products.map(product => (
+            <div className="col-md-4" key={product._id.$oid || product._id}>
+              <ProductCard product={{...product, id: product._id.$oid || product._id}} />
+            </div>
+          ))}
+          {products.length === 0 && <div className="col-12"><p className="text-center">No products found.</p></div>}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Products;
