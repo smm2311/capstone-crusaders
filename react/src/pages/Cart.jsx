@@ -27,7 +27,7 @@ function Cart() {
         <tbody>
           {cart.map(item => (
             <tr key={item.id}>
-              <td>{item.name}</td>
+              <td>{item.productName}</td>
               <td>${item.price.toFixed(2)}</td>
               <td>
                 <button className="btn btn-sm btn-danger" onClick={() => removeFromCart(item.id)}>Remove</button>

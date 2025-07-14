@@ -98,7 +98,7 @@ function Home() {
         <div className="row g-4 justify-content-center">
           {featured.map(product => (
             <div className="col-md-4" key={product._id}>
-              <ProductCard product={product} />
+              <ProductCard product={{...product, id: product._id?.$oid || product._id}} />
             </div>
           ))}
         </div>
