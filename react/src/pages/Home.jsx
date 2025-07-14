@@ -9,9 +9,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  const [sliceStartI, setSliceStartI] = useState(Math.floor(Math.random() * products.length));
-
-  let featured = products.slice(sliceStartI, sliceStartI + 3);
+  const [featured, setFeatured] = useState([]);
 
   useEffect(() => {
     async function fetchProducts() {
@@ -24,6 +22,11 @@ function Home() {
     fetchProducts();
 
   }, []);
+
+  useEffect(() => {
+    const sliceStartI = Math.floor(Math.random() * (products.length - 3));
+    setFeatured(products.slice(sliceStartI, sliceStartI + 3));
+  }, [products]);
 
   const handleSearchChange = (event) => {
     const query = event.target.value;
