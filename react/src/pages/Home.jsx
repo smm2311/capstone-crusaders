@@ -61,7 +61,7 @@ function Home() {
                 <ul className="dropdown-menu show w-100" style={{maxHeight: '900px', overflowY: 'auto'}}>
                   {filteredProducts.map(product => (
                     <li key={product._id}>
-                      <ProductCard product={product} smallImages={true} />
+                      <ProductCard product={{...product, id: product._id?.$oid || product._id}} smallImages={true} />
                     </li>
                   ))}
                 </ul>
